@@ -1,0 +1,15 @@
+# Configuration definitions for thorn Boost
+
+PROVIDES Boost
+{
+  SCRIPT src/detect.sh
+  LANG bash
+  OPTIONS BOOST_DIR BOOST_INSTALL_DIR BOOST_LIBS BOOST_INCLUDE_DIRS BOOST_LIB_DIRS
+}
+
+# Pass configuration options to build script
+REQUIRES Boost
+
+OPTIONAL MPI
+{
+}
