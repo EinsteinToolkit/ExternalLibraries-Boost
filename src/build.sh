@@ -76,7 +76,7 @@ if [ -n "$MAX_JOBS" ]; then
   # one job is for "free" since it represents this process
   JOBS_OPT=-j$(( ${#JOBSERVER_TOKENS} + 1 ))
 else # no maximum
-  JOBS_OPT=-j
+  JOBS_OPT=
 fi
 
 
