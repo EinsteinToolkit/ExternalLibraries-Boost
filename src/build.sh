@@ -112,9 +112,14 @@ ${TAR?} xzf ${SRCDIR}/../dist/${NAME}-stripped.tar.gz
 
 echo "Boost: Configuring..."
 cd ${NAME}
-B2_OPTS=--without-python
+B2_OPTS="
+--with-filesystem
+--with-math
+--with-system
+"
 if [ -n "${HAVE_CAPABILITY_MPI}" ]; then
   echo 'using mpi ;' > user-config.jam
+  B2_OPTS="${B2_OPTS} --with-mpi"
 fi
 ./bootstrap.sh --prefix=${BOOST_DIR}
 

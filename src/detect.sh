@@ -55,7 +55,7 @@ if [ -n "$BOOST_BUILD" -o -z "${BOOST_DIR}" ]; then
     BOOST_DIR=${INSTALL_DIR}
     BOOST_INC_DIRS="$BOOST_DIR/include"
     BOOST_LIB_DIRS="$BOOST_DIR/lib"
-    BOOST_LIBS="boost_filesystem boost_system"
+    BOOST_LIBS="boost_atomic boost_filesystem boost_math_c99 boost_math_c99f boost_math_c99l boost_math_tr1 boost_math_tr1f boost_math_tr1l boost_system"
 else
     BOOST_BUILD=
     DONE_FILE=${SCRATCH_BUILD}/done/${THORN}
