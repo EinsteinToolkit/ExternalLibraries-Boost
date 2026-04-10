@@ -24,7 +24,8 @@ fi
 # Try to find the library if build isn't explicitly requested
 if [ -z "${BOOST_BUILD}" ]; then
     # look for the same shared libraries David's Boost provided
-    find_lib BOOST boost 1 1.0 "boost_filesystem boost_system" "boost/filesystem.hpp boost/system" "$BOOST_DIR"
+    # systems is include-only since Boost 1.69 which is from 2018
+    find_lib BOOST boost 1 1.0 "boost_filesystem" "boost/filesystem.hpp boost/system" "$BOOST_DIR"
 fi
 
 THORN=Boost
