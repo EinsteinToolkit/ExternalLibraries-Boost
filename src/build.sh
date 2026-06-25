@@ -113,6 +113,7 @@ ${TAR?} xzf ${SRCDIR}/../dist/${NAME}-stripped.tar.gz
 echo "Boost: Configuring..."
 cd ${NAME}
 B2_OPTS="
+--with-atomic
 --with-filesystem
 --with-math
 --with-system
