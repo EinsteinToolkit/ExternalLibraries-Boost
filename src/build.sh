@@ -125,7 +125,7 @@ fi
 ./bootstrap.sh --prefix=${BOOST_DIR}
 
 echo "Boost: Building..."
-./b2 ${JOBS_OPT} ${B2_OPTS} link=static
+./b2 cxxflags="${CXXFLAGS}" ${JOBS_OPT} ${B2_OPTS} link=static
 
 echo "Boost: Installing..."
 ./b2 install ${B2_OPTS} link=static
